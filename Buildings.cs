@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeekBrains.Lesson4.Task1
 {
+
     class Buildings
     {
         private int BuildingNumber;
@@ -16,67 +17,75 @@ namespace GeekBrains.Lesson4.Task1
         const int FlatsInFloors = 5;
         private static int LastBuildingNumber;
 
-        internal int GetBuildingNumber()
+        public Buildings(string n)
+        {
+            Console.WriteLine(n);
+        }
+
+        public int GetBuildingNumber()
         {
             BuildingNumber = LastBuildingNumber + 1;
             return BuildingNumber;
         }
 
-        internal double GetHeight()
+        public double GetHeight()
         {
             return Height;
         }
 
-        internal int GetFloor()
+        public int GetFloor()
         {
             return Floor;
         }
 
-        internal int GetFlatsNumber()
+        public int GetFlatsNumber()
         {
             return FlatsNumber;
         }
-        internal int GetEntranceNumber()
+        public int GetEntranceNumber()
         {
             return EntranceNumber;
         }
-        internal int SetBuildingNumber(int value)
+        public int SetBuildingNumber(int value)
         {
             return BuildingNumber = value;
         }
 
-        internal double SetHeight(double value)
+        public double SetHeight(double value)
         {
             return Height = value;
         }
 
-        internal int SetFloor(int value)
+        public int SetFloor(int value)
         {
             return Floor = value;
         }
-        internal int SetFlatsNumber(int value)
+        public int SetFlatsNumber(int value)
         {
             return FlatsNumber = value;
         }
 
-        internal int SetEntranceNumber(int value)
+        public int SetEntranceNumber(int value)
         {
             return EntranceNumber = value;
         }
-        internal double CalculateFloorHeight(double Height, int Floor)
+        public double CalculateFloorHeight(double Height, int Floor)
         {
             return Height * Floor;
         }
 
-        internal int CalculateFlatsInEntrance(int Floors)
+        public int CalculateFlatsInEntrance(int Floors)
         {
             return Floors * FlatsInFloors;
         }
-        internal int GetFlatsinFloor()
+        public int GetFlatsinFloor()
         {
             return FlatsInFloors;
         }
 
-
+        //public override Buildings Create()
+        //{
+        //    return new Buildings("House Created");
+        //}
     }
 }
